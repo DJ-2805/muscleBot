@@ -8,7 +8,7 @@ This project was designed and developed by:
 - Noah Molloy
 - Ryan Jacobs
 
-![hardware][sensorBoard.jpg]
+![hardware][https://github.com/dj-2805/muscleBot/blob/master/sensorBoard.jpg]
 # Hardware Used
 
 

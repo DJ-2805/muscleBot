@@ -9,7 +9,24 @@ This project was designed and developed by:
 - Ryan Jacobs
 
 ![hardware](https://github.com/dj-2805/muscleBot/blob/master/sensorBoard.jpg)
+
 # Hardware Used
+1. Sensor Board
+    - Arduino Nano
+    - Accelerometer (ADXL345)
+    - Bluetooth Modem (BC417)
+    - MyoWare Muscle Sensor
+2. Bot
+    - Arduino Nano
+    - Bluetooth Modem (BC417)
+    - motors (2-4)
+    - relays
+    - etc.
+
+
+
+![muscleBot](https://github.com/dj-2805/muscleBot/blob/master/muscleBot.jpg)
+
 
 
 # Repository Structure

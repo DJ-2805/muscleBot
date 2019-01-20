@@ -8,6 +8,7 @@ This project was designed and developed by:
 - Noah Molloy
 - Ryan Jacobs
 
+![hardware][sensorBoard.jpg]
 # Hardware Used
 
 

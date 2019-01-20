@@ -93,5 +93,5 @@ void loop() {
     Serial.println(movement);
   }
 
-  delay(50);
+  delay(100);
 }

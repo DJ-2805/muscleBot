@@ -1,6 +1,11 @@
 # Muscle Bot
 Arduino powered robot that communicates with the user via Bluetooth and moves from hand movements
 
+### Use
+The muscle sensor was the main item that we wanted to use on this project.
+We would place it and it's sensors on our hand to detect eletrcic pulses from contracting muscles.
+That would be a trigger to the machine to be prepared to recieve a gesture as a movement in a certain direction.
+
 # Team
 This project was designed and developed by:
 - David James

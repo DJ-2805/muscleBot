@@ -88,7 +88,7 @@ void loop() {
       movement = 's';
     }
   } else {
-    movement = 'w';
+    movement = 'a';
     movement = BT.write(movement);
     Serial.println(movement);
   }

@@ -1,11 +1,11 @@
-# muscleRobot
+# Muscle Bot
 Arduino powered robot that communicates with the user via Bluetooth and moves from hand movements
 
 # Team
 This project was designed and developed by:
 - David James
 - Alex Chen
-- Noah Monally
+- Noah Molloy
 - Ryan Jacobs
 
 # Hardware Used

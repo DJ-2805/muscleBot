@@ -1,9 +1,20 @@
 #include <SparkFun_ADXL345.h>         // SparkFun ADXL345 Library
+#include <SoftwareSerial.h>
 
 ADXL345 adxl = ADXL345(10);           // USE FOR SPI COMMUNICATION, ADXL345(CS_PIN);
+SoftwareSerial BT(7, 6);              // RX | TX: choose whatever, it doesn't matter
+
+const long BTBaudRate = 38400; 
+const long BTPeriod = 10; // millisec
+const int LEFT = 4;
+const int RIGHT = 2;
+char movement;
+int buffer = 25;
 
 /******************** SETUP ********************/
 void setup(){
+  BT.begin(BTBaudRate);
+  
   Serial.begin(9600);                 // Start the serial terminal
   Serial.println("Hello World!");
   Serial.println();
@@ -54,35 +65,32 @@ void setup(){
 }
 
 void loop() {
-  // intended movement
-  char movement = \'s\';
-
-  // small buffer to cover noise
-  int buffer = 25;
-
   // EGM Muscle Readings
   double sensorValue = analogRead(A0);
+  Serial.println(sensorValue);
 
   // Accelerometer Readings
   int x,y,z;
   adxl.readAccel(&x, &y, &z);         // Read the accelerometer values and store them in variables declared above x,y,z
 
   // checking if muscle was flexed
-  if(sensorValue >= 800) {
+  if(sensorValue >= 800 && !BT.available()) {
     if((-300+buffer > z && -300-buffer <= z) && (buffer > y && -1*buffer <= y)) {
-      movement = \'d\';
+      movement = 'd';
     }
     else if((-300+buffer > z && -300-buffer <= z) && (200+buffer > y && 200-buffer <= y)) {
-      movement = \'a\';
+      movement = 'a';
     }
     else if((200+buffer > x && 200-buffer < x) && (buffer > z && -1*buffer < z)) {
-      movement = \'w\';
+      movement = 'w';
     }
     else if((-300+buffer > x && 300-buffer < x) && (buffer > z && -1*buffer < z)) {
-      movement = \'s\';
+      movement = 's';
     }
   } else {
-    movement = \'s\';
+    movement = 'w';
+    movement = BT.write(movement);
+    Serial.println(movement);
   }
 
   delay(50);

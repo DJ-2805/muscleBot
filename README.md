@@ -1,5 +1,6 @@
 # Muscle Bot
-Arduino powered robot that communicates with the user via Bluetooth and moves from hand movements
+Arduino powered robot that communicates with the user via Bluetooth and moves from hand movements.
+- This was designed during the UCLA Hardware Hackathon IdeaHacks hosted by Theta Tau and IEEE.
 
 ### Use
 The muscle sensor was the main item that we wanted to use on this project.
